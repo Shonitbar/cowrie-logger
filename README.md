@@ -2,6 +2,8 @@
 
 Web interface for analyzing Cowrie honeypot logs.
 
+![Cowrie Honeypot Interface Dashboard](screenshot.png)
+
 ## Quick Start
 
 ```bash
