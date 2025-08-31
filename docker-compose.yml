@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  cowrie-interface:
+    build: .
+    ports:
+      - "3000:80"
+    environment:
+      # Configure the logs root path (default: /logs)
+      - VITE_LOGS_ROOT_PATH=/logs
+    volumes:
+      # Mount your logs directory here
+      # Change ./logs to your actual logs directory path
+      - ./logs:/usr/share/nginx/html/logs:ro
+      # Examples:
+      # - /var/log/cowrie:/usr/share/nginx/html/logs:ro
+      # - /data/honeypot-logs:/usr/share/nginx/html/logs:ro
+    restart: unless-stopped
+    container_name: cowrie-interface 
